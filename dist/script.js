@@ -25,12 +25,14 @@ const getAnswer = (data) => {
       answer.push(el2.a[0].txt + " id = " + el2.id);
     });
   });
-  let output = String(answer);
-  output = output.split(",").join("\n");
+  let output = "";
+  answer.forEach((item) => (output += item + "\n"));
   alert(output);
 };
 
 const getAnswerURL = (url) => {
+  const baseURL = "https://ed.engdis.com/EDOServices/PMService.svc/GetItem";
+  if (url.indexOf(baseURL) == -1) return null;
   const change = [
     {
       old: "viewMode=2",
@@ -49,6 +51,7 @@ const getAnswerURL = (url) => {
 $.ajaxSetup({
   complete: function () {
     const url = getAnswerURL(this.url);
+    if (!url) return;
     fetch(url)
       .then((res) => res.json())
       .then((data) => getAnswer(data))
