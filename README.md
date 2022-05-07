@@ -14,7 +14,7 @@ fetch(
   "https://raw.githubusercontent.com/MingHieu/ED-English/master/dist/script.min.js"
 )
   .then((r) => r.text())
-  .then((t) => eval(t));`
+  .then((t) => eval(t));
 ```
 
 3. Then enter
