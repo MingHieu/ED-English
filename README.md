@@ -8,15 +8,22 @@
 
 1. Join Ed English
 2. Open the console (`CTRL + SHIFT + J`) and paste the script:
-
+Practice :
 ```ts
 fetch(
-  "https://raw.githubusercontent.com/MingHieu/ED-English/master/dist/script.min.js"
+  "https://raw.githubusercontent.com/MingHieu/ED-English/master/dist/practice.min.js"
 )
   .then((r) => r.text())
   .then((t) => eval(t));
 ```
-
+Test : 
+```ts
+fetch(
+  "https://raw.githubusercontent.com/MingHieu/ED-English/master/dist/test.min.js"
+)
+  .then((r) => r.text())
+  .then((t) => eval(t));
+```
 3. Then enter
 
 ## Contributing
