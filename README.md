@@ -7,7 +7,8 @@
 ## Usage
 
 1. Join Ed English
-2. Open the console (`CTRL + SHIFT + J`) and paste the script:
+2. Open the console (`CTRL + SHIFT + J`) and paste the script:  
+
 Practice :
 ```ts
 fetch(
